@@ -1,0 +1,320 @@
+/* Include padding and border in total width and height */
+* {
+	box-sizing: border-box;
+}
+/* background color, page header, navigation bar layout,
+   and the footer will be the same for all pages */
+body {
+	background-color: #708090;
+}
+#main-header {
+	padding: 20px;
+	background-color: #2F4F4F;
+	color: white;
+	font-style: italic;
+}
+
+/* Designing the navigation bar */
+#navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2F4F4F;
+}
+nav li {
+  float: left;
+	width: 20%;
+  border-right:1px solid #bbb;
+}
+nav a {
+  display: inline-block;
+  padding: 10px 50px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+	width: 100%;
+}
+nav a:hover:not(.active) {
+  background-color: #5F9EA0;
+}
+.active {
+  background-color: lightblue;
+	color: black;
+}
+
+/* Designing the drop-Dowm content */
+.dropdown-content {
+	display: none;
+	width: 19.6%;
+  position: absolute;
+  background-color: #A9A9A9;
+  z-index: 1;
+}
+.dropdown-content a {
+  display: block;
+  color: black;
+  padding: 12px 15px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+	background-color: inherit;
+	color: white;
+}
+nav li:hover .dropdown-content{
+  display: block;
+}
+
+/* Designing the fotter */
+footer {
+	clear: both;
+	width: 100%;
+	background-color: #2F4F4F;
+	color: white;
+	border: 2px solid black;
+	text-align: center;
+	margin-top: 10px;
+}
+footer p {
+	margin: 2px;
+}
+footer a {
+	color: black;
+}
+footer a:hover {
+	color: red;
+}
+
+/* Changing the font style to italic for all h3 level heading in the all pages */
+h3 {
+	font-style: italic;
+	font-size: 1.3em;
+}
+
+/* Editing section area for all pages except home and contact */
+section:not(#home):not(#contact) {
+	background-color: lightgrey;
+	width: 80%;
+	padding: 10px;
+	margin: 2% 10%;
+}
+
+/* Positioning the image and text in home page */
+#home {
+	float: left;
+	width: 45%;
+	margin: 10% 2% 2%;
+	padding: 2% 1%;
+	background-color: lightgrey;
+}
+#home p {
+	font-weight: bold;
+	float: left;
+	margin: 0% 0% 3% 10%;
+}
+#home q {
+	font-style: italic;
+	display: block;
+	clear: both;
+}
+figure {
+	float: right;
+	width: 50%;
+	margin: 5% 1% 2% 0%;
+}
+figure img {
+	width: 100%;
+	height: 500px;
+}
+figure figcaption {
+	text-align: center;
+	color: white;
+}
+
+/* Adding an icon to the header of the about page */
+#about-h1::after {
+	margin-left: 1%;
+	display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: url('icons/smiley.svg.png') no-repeat 0 0;
+  background-size: 100%;
+	background-position: bottom;
+}
+
+/* Editing the links at the top of hobbies and travel pages */
+.topList li {
+	list-style-type: none;
+	background-image: url('icons/right-20.png');
+  background-position: center left;
+  background-repeat: no-repeat;
+  padding-left: 25px;
+}
+.topList a {
+	text-decoration: underline;
+  color: blue;
+}
+.topList a:hover {
+	text-decoration: underline;
+  color: red;
+}
+
+/* Positioning the images in the hobbies and travel page */
+#hobbies img {
+	height: 300px;
+	width: 60%;
+	margin-left: 20%;
+}
+#travel img {
+	height: 300px;
+	width: 100%;
+}
+
+/* Moving the section of the contact page to the left */
+#contact {
+	background-color: lightgrey;
+	float: left;
+	width: 43%;
+	margin: 2% 1%;
+	padding: 1%;
+}
+/* Make some text in the section to stand out */
+#contact p:not(:last-child) {
+	font-style: italic;
+	font-weight: bold;
+}
+#contact a:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+/* Moving the socails of the contact page to the right */
+.socials {
+	float: right;
+	width: 45%;
+	margin: 2% 1% 0% 0%;
+	background-color: lightgrey;
+	text-align: center;
+}
+/* Editing the icons in the socails section of the contact page */
+.socials img {
+  float: left;
+	width: 20%;
+	height: 120px;
+	margin: 3% 5%;
+}
+.socials .fb:hover {
+	content: url('icons/facebook2.png');
+}
+.socials .insta:hover {
+	content: url('icons/instagram2.png');
+}
+.socials .linked:hover {
+	content: url('icons/linkedin2.svg.png');
+}
+
+/* Designing the form in the contact page */
+form {
+	clear: both;
+	background-color: lightgrey;
+	border-radius: 10px;
+	border: 2px solid grey;
+	padding: 1%;
+}
+form p {
+	margin: 5px;
+}
+input[type=text], input[type=number] {
+    width: 40%;
+		background-color: #F0FFF0;
+    padding: 12px 20px;
+		border: 2px solid black;
+    border-radius: 5px;
+		font-size: 1.5em;
+		outline: none;
+    transition: width 1s ease-in-out;
+}
+input[type=text]:focus {
+    border: 3px solid red;
+		width: 50%
+}
+input[type=number]:focus, textarea:focus {
+	border: 3px solid red;
+}
+textarea {
+    width: 100%;
+    padding: 12px 12px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: #F0FFF0;
+    font-size: 1.3em;
+    resize: none;
+		outline: none;
+}
+input[type=submit], input[type=reset] {
+	cursor: pointer;
+	width: 20%;
+	padding: 10px;
+}
+input[type=submit]:hover, input[type=reset]:hover {
+	background-color: #DCDCDC;
+	border-radius: 10px;
+}
+
+/* Media query for  screen size less than 800px */
+/* This will work with ipads */
+/* It will also work with phones since I am using liquid layout */
+@media only screen and (max-width: 800px) {
+	/* Make each navigation link full screen */
+		nav li {
+			width: 100%;
+			border-bottom: 1px solid #AFEEEE;
+		}
+		/* Hide the dropdown-content since it will interfere with the other links */
+		.dropdown-content a {
+			display: none;
+		}
+		/* Show the content and image under each other for home page */
+		figure, #home {
+			width: 100%;
+			margin: 0px;
+			margin-top: 2%;
+		}
+		figure img {
+			height: 300px;
+		}
+		#home {
+			margin-bottom: 2%;
+			padding: 2%;
+		}
+		/* Some adjustments for sections of all pages except home and cotanct */
+		section:not(#home):not(#contact) {
+			width: 90% !important;
+			margin: 2% 5% !important;
+		}
+		/* Adjustting the images the hobbies pages */
+		#hobbies img {
+			width: 100%;
+			margin: 0%;
+		}
+		/* Show the content and socials under each other in contact page */
+		.socials, #contact {
+			width: 100%;
+			margin: 2% 0%;
+		}
+		/* make the content in the contact section appear in the centre */
+		#contact p, #contact h2 {
+			text-align: center;
+		}
+		input[type=text], input[type=number] {
+			width: 100%;
+			transition: none;
+		}
+		input[type=text]:focus {
+			width: 100%;
+		}
+		input[type=submit], input[type=reset] {
+			width: 40%;
+		}
+}
